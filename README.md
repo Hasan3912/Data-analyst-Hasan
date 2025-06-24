@@ -322,8 +322,6 @@ The dataset used remains: **Issued Operating Permits – Water Systems (Downtown
 
 Implemented a **CIA Triad** security framework (Confidentiality, Integrity, Availability) using AWS-native services to protect all data storage and movement across the platform.
 
----
-
 ### Confidentiality – Encryption with AWS KMS
 
 **Create Custom KMS Key**  
@@ -387,7 +385,6 @@ Automated quality control was implemented using AWS Glue Studio with rule-based 
 
 ![Glue Studio Visual Job Overview](https://raw.githubusercontent.com/Hasan3912/Data-analyst-Hasan/main/Glue%20Studio%20Visual%20Job%20Overview.png)
 
----
 
 ## Phase 8: Data Observability
 
@@ -443,6 +440,8 @@ Implemented full-stack observability using AWS CloudWatch and CloudTrail to moni
 | Querying & Logging     | Amazon Athena               |
 
 
+
+
 ## Conclusion
 
 This portfolio presents the complete implementation of a Cloud-Based Data Analytics Platform using AWS. It was developed as part of the BUSI 653 course at University Canada West, and it demonstrates end-to-end data engineering and analytics skills across multiple AWS services.
@@ -462,6 +461,8 @@ The work emphasizes both technical capability and strategic planning. Each phase
 
 The projects used real data from the City of Vancouver and applied analytics to uncover patterns in water quality, system performance, and permit management. 
 
+
+
 ## Final Reflection
 
 This experience allowed me to integrate theory with practical application in a real-world cloud computing environment. I gained proficiency with:
@@ -476,5 +477,3 @@ Hasan Ali Ahmed
 MBA – University Canada West  
 Contact: hasanaliahmmed3912@gmail.com
 LinkedIn: https://www.linkedin.com/in/hasanaliahmed3912/
-
-
