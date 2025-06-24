@@ -42,6 +42,7 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 ## 🗕️ Weekly Breakdown
 
 ### Week 2: Infrastructure Design & Problem Definition
+
 **Design**
 - System architecture diagram linking UCW to AWS
 - VPC configuration with `Finance-VPC-Men` and security group `Finance-SG-Men`
@@ -53,10 +54,16 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 - Uploaded raw datasets and structured folders by type/frequency
 
 **Visual Preview**
-- Architecture Diagram (draw.io)
-- Fishbone Root Cause Diagram
+![Finance Architecture Diagram](week2/images/Finance%20Data%20Lake%20Design%20-%20Hasan-CC%20Solution%20%232.jpg)  
+*Figure 1: Finance Data Lake Design*
+
+![Week 2 Implementation Screenshot](week2/images/Implementation%20w2.png)  
+*Figure 2: S3 Folder Setup and Raw Zone Creation*
+
+---
 
 ### Week 3: Data Ingestion & Cleaning Pipeline
+
 **Design**
 - Cleaning strategy in Excel: null handling, format standardization, deduplication plan
 - Cost estimation using AWS Pricing Calculator and S3 Storage Lens
@@ -67,10 +74,12 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 - Captured screenshots of AWS Glue execution and pricing breakdowns
 
 **Visual Preview**
-- Glue Job Screenshot
-- AWS Pricing Summary PDF
+*Screenshots to be added in `/week3/images/` folder*
+
+---
 
 ### Week 4: Profiling & ETL Implementation
+
 **Design**
 - ETL Workflow: Extract (S3) → Transform (Glue) → Load (Curated S3)
 - Data partition strategy by categorical field (e.g., platform, failure reason)
@@ -81,8 +90,7 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 - Validated folder output and structure in user/system directories
 
 **Visual Preview**
-- ETL Pipeline Diagram (draw.io)
-- Partitioned S3 Output Screenshot
+*Screenshots to be added in `/week4/images/` folder*
 
 ---
 
@@ -112,14 +120,19 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 ```bash
 /aws-project-portfolio
 ├── week2
+│   ├── images
+│   │   ├── Finance Data Lake Design - Hasan-CC Solution #2.jpg
+│   │   └── Implementation w2.png
 │   ├── architecture_diagram.drawio
 │   ├── fishbone_diagram.drawio
 │   └── finance-raw-bim/
 ├── week3
+│   ├── images/
 │   ├── cleaning_plan.xlsx
 │   ├── glue_job_screenshot.png
 │   └── cost_evaluation.pdf
 ├── week4
+│   ├── images/
 │   ├── profiling_report.png
 │   ├── etl_pipeline_diagram.drawio
 │   └── transformed_dataset/
@@ -127,19 +140,3 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
     ├── Week2_Report.pdf
     ├── Week3_Report.pdf
     └── Week4_Report.pdf
-```
-
----
-
-## 👤 Author
-**Hasan Ali Ahmed**  
-MBA Candidate | Cloud & Data Analytics Enthusiast  
-📍 British Columbia, Canada  
-📧 hasanaliahmmed3912@gmail.com
-
----
-
-## 📁 Appendix
-- 📄 Week 2 Report (PDF)
-- 📄 Week 3 Report (PDF)
-- 📄 Week 4 Report (PDF)
