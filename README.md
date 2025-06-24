@@ -2,7 +2,7 @@
 <p align="center">
   Developed as part of BUSI 653 – Cloud Computing Technologies at University Canada West  
   <br>
-  Hasan Ali Ahmed | MBA Candidate, Spring 2025 Cohort
+  Hasan Ali Ahmed | MBA , Spring 2025 Cohort
 </p>
 
 ---
