@@ -352,7 +352,7 @@ Created replication policies for each primary S3 bucket to send data copies to r
 
 ## Phase 7: Data Governance
 
-Automated quality control using AWS Glue Studio with rule-based validation logic.
+Automated quality control was implemented using AWS Glue Studio with rule-based validation logic to ensure data accuracy, reliability, and consistency before further analysis.
 
 ### Rules Applied:
 - Completeness ≥ 95% for `inspector_name`
@@ -360,52 +360,88 @@ Automated quality control using AWS Glue Studio with rule-based validation logic
 - Mean of `average_temperature` > 5°C
 - Freshness of `permit_renewal_date` < 90 days
 
-### Process:
-- Added a **Data Quality Evaluation** node in Glue Studio
-- Enabled **row-level tracking** and routed outputs using **Conditional Router**
-- Cleaned schema before saving to S3 to remove AWS metadata columns
-- Stored output as:
-  - `Passed/` folder → High-quality records
-  - `Failed/` folder → Records with quality issues
+### Process Overview:
+1. **Data Quality Evaluation Node**  
+   - Inserted immediately after the data source in AWS Glue Studio.
+   - Used to apply automated validation rules.
+
+2. **Row-Level Outcome Tracking**  
+   - Enabled tracking to assign "passed" or "failed" tags at row level.
+
+3. **Conditional Routing**  
+   - Used a Conditional Router node to split valid and invalid rows.
+     - Passed → Directed to the `Passed/` folder.
+     - Failed → Directed to the `Failed/` folder.
+
+4. **Schema Cleanup**  
+   - Dropped AWS-generated metadata columns using a Change Schema transform to ensure compatibility with CSV output.
+
+5. **Optimized Output Generation**  
+   - Used Prepare for Load node with `repartition=1` to export single file outputs.
+
+6. **Final Output**  
+   - Valid records saved in: `s3://.../Passed/`
+   - Invalid records saved in: `s3://.../Failed/`
+
+#### Visual Reference:
+
+![Glue Studio Visual Job Overview](https://raw.githubusercontent.com/Hasan3912/Data-analyst-Hasan/main/Glue%20Studio%20Visual%20Job%20Overview.png)
+
+---
 
 ## Phase 8: Data Observability
 
-Ensured operational transparency through monitoring and auditing tools.
+Implemented full-stack observability using AWS CloudWatch and CloudTrail to monitor performance, trigger alerts, and audit system behavior.
 
-### Monitoring:
-- Created CloudWatch dashboard `van-wat-MCR-has`
-  - Widgets: `BucketSizeBytes`, `GlueJobRuntime`
-  - Refresh interval: 15 minutes
+### Monitoring Setup:
+1. **CloudWatch Dashboard: `van-wat-MCR-has`**
+   - Tracked:
+     - `BucketSizeBytes` (S3 storage monitoring)
+     - `GlueJobRuntime` (resource utilization)
+   - Auto-refresh every 15 minutes for near real-time system visibility.
 
-### Alarming:
-- Set up alarm `van-wat-alm-has` to monitor if bucket size exceeds 500,000 KB
-- Configured Simple Notification Service (SNS) for email alerts
+![Monitoring Setup with CloudWatch Dashboard](https://raw.githubusercontent.com/Hasan3912/Data-analyst-Hasan/main/Monitoring%20Setup%20with%20CloudWatch%20Dashboard.png)
 
-### Auditing:
-- Enabled CloudTrail logging (`van-wat-tra-has`)
-  - Captures API actions, job executions, and S3 access events
-  - Logs stored securely for later auditing via Athena
+2. **Dashboard Overview**  
+   A high-level screenshot showing widgets and real-time metrics.
+
+![Dashboard](https://raw.githubusercontent.com/Hasan3912/Data-analyst-Hasan/main/Dashboard.png)
+
+---
+
+### Alarming and Notifications:
+3. **CloudWatch Alarm: `van-wat-alm-has`**
+   - Triggered if `vancouver-raw-water` bucket size exceeds 500,000 KB.
+   - SNS topic created to send immediate email notifications upon threshold breach.
+
+![Establishing Proactive Controls with Alarms](https://raw.githubusercontent.com/Hasan3912/Data-analyst-Hasan/main/Establishing%20Proactive%20Controls%20with%20Alarms.png)
+
+---
+
+### Auditing with CloudTrail:
+4. **Trail: `van-wat-tra-has`**
+   - Logs all API-level events including:
+     - S3 access
+     - Glue job execution
+     - Configuration changes
+   - Logs stored securely and queryable via Amazon Athena.
+
+![User Activity Logging with CloudTrail](https://raw.githubusercontent.com/Hasan3912/Data-analyst-Hasan/main/User%20Activity%20Logging%20with%20CloudTrail.png)
+
+---
 
 ## Tools and Technologies Used
 
-| Category              | Tool / Platform                      |
-|-----------------------|--------------------------------------|
-| Encryption & Keys     | AWS KMS                              |
-| Cloud Storage         | AWS S3                               |
-| Data Wrangling        | AWS Glue Studio, DataBrew            |
-| Monitoring            | AWS CloudWatch                       |
-| Alerts & Notifications| CloudWatch Alarms, SNS               |
-| Auditing              | AWS CloudTrail                       |
-| Querying & Logging    | Amazon Athena                        |
+| Category               | Tool / Platform             |
+|------------------------|-----------------------------|
+| Encryption & Keys      | AWS KMS                     |
+| Cloud Storage          | AWS S3                      |
+| Data Wrangling         | AWS Glue Studio, DataBrew   |
+| Monitoring             | AWS CloudWatch              |
+| Alerts & Notifications | CloudWatch Alarms, SNS      |
+| Auditing               | AWS CloudTrail              |
+| Querying & Logging     | Amazon Athena               |
 
-
-## Deliverables
-
-- AWS screenshots: KMS, S3, Glue Studio, CloudWatch, CloudTrail
-- PDF report with full documentation
-- Quality rules configuration file
-- Folder structure with job definitions and pipeline visuals
-- GitHub repository (this repo)
 
 ## Conclusion
 
