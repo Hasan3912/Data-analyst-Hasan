@@ -196,10 +196,10 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Created an S3 bucket (`vancouver-raw-men`) with a subfolder (`WaterSystemPermits`)
 
 **Supporting Visual:**  
-![Data Ingestion](
+![Data Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20ingestion%20.png?raw=true)
 
 **Cost Evaluation Diagram:**  
-![Cost Evaluation of Dataset Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/38f864ca7160489c858cabc13a1f89f50776acbd/Cost%20Evaluation%20of%20Dataset%20Ingestion%20.png)
+![Cost Evaluation of Dataset Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Cost%20Evaluation%20of%20Dataset%20Ingestion%20.png?raw=true)
 
 ---
 
@@ -209,7 +209,8 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Verified schema, checked for missing values and anomalies (no critical issues found)
 
 **Supporting Visual:**  
-![Data Profiling](
+![Data Profiling](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Profiling.png?raw=true)
+
 ---
 
 ### Phase 3: Data Cleaning
@@ -219,7 +220,9 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Addressed inconsistencies from both system-generated and user-input data
 
 **Supporting Visual:**  
-![Data Cleaning Implementation System](
+![Data Cleaning Implementation System](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cleaning%20Implementation%20System.png?raw=true)
+
+---
 
 ### Phase 4: Data Cataloging
 - Designed ETL architecture and flowcharts
@@ -227,7 +230,7 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Ran crawler on cleaned dataset to populate catalog with structured table
 
 **Supporting Visual:**  
-![Data Cataloging](h
+![Data Cataloging](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cataloging.png?raw=true)
 
 ---
 
@@ -239,6 +242,14 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 
 **Supporting Visual:**  
 ![Data Enriching Implementation](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Enriching%20Implementation.png?raw=true)
+
+---
+
+## Key Findings
+
+- Water temperature followed a seasonal trend, with peaks in winter and dips in summer
+- Turbidity levels increased steadily, indicating potential degradation of water clarity
+- Emphasized need for timely inspections and permit renewals to maintain water safety standards
 
 ---
 
