@@ -1,57 +1,40 @@
-<h2 align="center">Contents Overview</h2>
-
-<div align="center">
-
-<table width="100%" border="0">
-  <thead>
-    <tr>
-      <th style="text-align:left;">Module</th>
-      <th style="text-align:left;">Focus Area</th>
-      <th style="text-align:left;">Tools & Technologies</th>
-      <th style="text-align:left;">Key Deliverables</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Week 2</strong></td>
-      <td>Infrastructure & Architecture</td>
-      <td>EC2, VPC, S3, draw.io</td>
-      <td>System Diagram, Fishbone, Raw Data Upload</td>
-    </tr>
-    <tr>
-      <td><strong>Week 3</strong></td>
-      <td>Data Ingestion & Cleaning</td>
-      <td>Glue, S3, Excel</td>
-      <td>Cleaning Strategy, Job Execution, Cost Evaluation</td>
-    </tr>
-    <tr>
-      <td><strong>Week 4</strong></td>
-      <td>Profiling & ETL</td>
-      <td>DataBrew, Glue, S3</td>
-      <td>Profiling Report, ETL Pipeline, Transformed Data</td>
-    </tr>
-    <tr>
-      <td><strong>Project 1</strong></td>
-      <td>Water System Compliance Analysis</td>
-      <td>Athena, DataBrew, Excel, draw.io</td>
-      <td>Permit Trends, Visualizations, Recommendations</td>
-    </tr>
-    <tr>
-      <td><strong>Project 2</strong></td>
-      <td>Finance Forecasting & Budget Accuracy</td>
-      <td>Glue, EC2, Excel, S3</td>
-      <td>ETL Pipeline, Root Cause Diagrams, Clean Datasets</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-
-<h1 align="center">AWS Cloud-Based Finance System</h1>
+<h1 align="center">Cloud-Based Data Analytics & AWS Project Portfolio</h1>
 <p align="center">
-  <i>A technical portfolio showcasing data infrastructure, analytics, and ETL automation using AWS.</i>
+  Developed as part of BUSI 653 – Cloud Computing Technologies at University Canada West  
+  <br>
+  Hasan Ali Ahmed | MBA Candidate, Spring 2025 Cohort
 </p>
+
+---
+
+## About This Portfolio
+
+This portfolio presents a complete collection of AWS cloud-based projects and weekly implementations focused on infrastructure setup, data cleaning, profiling, and ETL automation. Each segment showcases real-world cloud solutions that address problems in financial forecasting and urban water system management.
+
+These projects are designed to demonstrate applied technical skills, data-driven problem solving, and modern infrastructure planning using Amazon Web Services (AWS).
+
+---
+
+## Portfolio Contents
+
+| Module           | Focus Area                                 | Key Deliverables                                                 |
+|------------------|---------------------------------------------|------------------------------------------------------------------|
+| **Week 2**        | AWS Infrastructure & Architecture            | VPC, EC2, Architecture Diagram, Fishbone Diagram, Raw Dataset    |
+| **Week 3**        | Data Ingestion & Cleaning                    | Cleaning Plan (Excel), AWS Glue Job, Cost Evaluation             |
+| **Week 4**        | Profiling & ETL Pipeline                     | DataBrew Profiling, ETL Workflow, Transformed Dataset            |
+| **Project 1**     | Water System Compliance Analysis             | Athena Analysis, Trend Graphs, Visualized Dashboard              |
+| **Project 2**     | Budget Forecasting System                    | Financial ETL Pipeline, Excel Forecasting Model, Final Report    |
+
+---
+
+## Technical Skills Demonstrated
+
+- Cloud Infrastructure: Amazon EC2, S3, VPC
+- ETL & Data Transformation: AWS Glue
+- Data Profiling & Cleaning: AWS DataBrew, Excel
+- Querying & Analysis: Amazon Athena, SQL
+- Visualization: Excel Dashboards, draw.io Diagrams
+- Cost Evaluation: S3 Tiering, Compute Pricing
 
 ---
 
