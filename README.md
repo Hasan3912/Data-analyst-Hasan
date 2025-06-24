@@ -196,10 +196,10 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Created an S3 bucket (`vancouver-raw-men`) with a subfolder (`WaterSystemPermits`)
 
 **Supporting Visual:**  
-![Data Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20ingestion%20.png)
+![Data Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20ingestion%20.png?raw=true)
 
 **Cost Evaluation Diagram:**  
-![Cost Evaluation of Dataset Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Cost%20Evaluation%20of%20Dataset%20Ingestion%20.png)
+![Cost Evaluation of Dataset Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Cost%20Evaluation%20of%20Dataset%20Ingestion%20.png?raw=true)
 
 ---
 
@@ -209,7 +209,7 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Verified schema, checked for missing values and anomalies (no critical issues found)
 
 **Supporting Visual:**  
-![Data Profiling](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Profiling.png)
+![Data Profiling](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Profiling.png?raw=true)
 
 ---
 
@@ -220,7 +220,7 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Addressed inconsistencies from both system-generated and user-input data
 
 **Supporting Visual:**  
-![Data Cleaning Implementation System](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cleaning%20Implementation%20System.png)
+![Data Cleaning Implementation System](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cleaning%20Implementation%20System.png?raw=true)
 
 ---
 
@@ -230,7 +230,7 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Ran crawler on cleaned dataset to populate catalog with structured table
 
 **Supporting Visual:**  
-![Data Cataloging](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cataloging.png)
+![Data Cataloging](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cataloging.png?raw=true)
 
 ---
 
@@ -241,7 +241,9 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Created Excel-based line graphs to visualize findings
 
 **Supporting Visual:**  
-![Data Enriching Implementation](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Enriching%20Implementation.png)
+![Data Enriching Implementation](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Enriching%20Implementation.png?raw=true)
+
+---
 
 
 ## Key Findings
