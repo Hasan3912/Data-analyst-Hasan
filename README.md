@@ -1,99 +1,106 @@
-# Descriptive Analysis of Issued Operating Permits – Water Systems (Downtown Vancouver)
+# AWS Cloud-Based Finance System (Weeks 2–4 Progress Portfolio)
 
-## Project Overview  
-This project analyzes the **"Issued Operating Permits – Water Systems"** dataset from the City of Vancouver's Open Data Portal, focusing specifically on Downtown Vancouver.  
-The goal is to uncover temporal trends in water system permits and water quality indicators—such as **temperature** and **turbidity**—to enhance **permit compliance**, **maintenance strategies**, and overall **urban water safety**.
-
----
-
-## Objectives
-
-- Identify patterns in **permit issuance**, **system activity**, and **system types**.
-- Detect trends in water quality indicators like **turbidity** and **temperature**.
-- Provide actionable recommendations to improve monitoring and policy enforcement.
+## Course: BUSI 653 – Cloud Computing Technologies  
+University Canada West | Spring 2025  
+Instructor: Dr. Mahmood Mortazavi Dehkordi  
+Submitted by: Hasan Ali Ahmed (ID: 2239226)
 
 ---
 
-## Tools & Technologies
+## Project Summary
 
-| Tool                | Purpose                                              |
-|---------------------|------------------------------------------------------|
-| Amazon S3           | Data storage and organization                        |
-| AWS Glue DataBrew   | Data profiling and cleaning                          |
-| AWS Glue Catalog    | Data schema creation and cataloging                  |
-| Amazon Athena       | SQL querying and descriptive statistics              |
-| Microsoft Excel     | Visualizations and trend analysis                    |
-| draw.io             | Workflow and root-cause diagrams                     |
+This portfolio outlines the step-by-step development of a cloud-based finance data management system using AWS. The work spans Weeks 2 to 4 and demonstrates infrastructure setup, data profiling, ingestion, transformation, cost evaluation, and ETL implementation.
 
 ---
 
-## Dataset Description
+## Week 2 – Architecture & Foundation Setup
 
-**Source**: City of Vancouver Open Data Portal  
-**Records**: 594 (Filtered to Downtown Vancouver)
+### Technical Setup
+- Created a Virtual Private Cloud (VPC) named `Finance-VPC-Men`
+- Configured a Security Group `Finance-SG-Men`
+- Launched a t3.micro EC2 instance with public access
+- Documented CLI commands for repeatable infrastructure setup
 
-**Key Features:**
+### Diagrams & Root Cause Analysis
+- Designed a system architecture diagram using draw.io to visualize UCW's integration with AWS (EC2, S3, IAM)
+- Created a Fishbone (Cause-and-Effect) diagram to explore factors contributing to delayed payments
 
-- `Permit ID`: Unique identifier  
-- `System Type`: Cooling Tower, Decorative Water Feature, etc.  
-- `Status`: Active or Inactive  
-- `Average Temperature`: Water temperature (°C)  
-- `Average Turbidity`: Water clarity (NTU)  
-- `Permit Renewal Date`: Last renewal date  
-- `Voluntary Participation`: Compliance flag  
-- `Marker Color`: Visualization category
+### Data Management
+- Organized and stored three datasets: Historical Budgets, Department Expenses, Revenue Streams
+- Used Amazon S3 bucket `finance-raw-bim` for efficient, scalable storage
+- Structured folders by update frequency, storage class, and data ownership
 
----
-
-## Methodology
-
-### 1. Data Ingestion & Profiling
-- Uploaded raw data to **Amazon S3**
-- Used **AWS Glue DataBrew** for profiling and quality checks
-- Minor transformations applied in DataBrew to clean the dataset
-
-### 2. Cataloging & Querying
-- Created catalog in **AWS Glue**
-- Queried data with **Amazon Athena** to:
-  - Count active vs. inactive systems
-  - Analyze system types
-  - Observe monthly changes in turbidity & temperature
-
-### 3. Visualization
-- Created **line graphs** in Excel for trends
-- Used **Athena exports** for dashboarding
-- Designed **fishbone diagram** (draw.io) to visualize root causes
+### Problem Statement
+Focused on improving department budget forecasting using historical data. Identified key issues including outdated software, lack of training, absence of standardized review processes, and poor departmental communication.
 
 ---
 
-##  Key Insights
+## Week 3 – Dataset Ingestion & Cleaning
 
-- **Water Temperature** peaks in winter — likely due to indoor or heated systems  
-- **Turbidity levels** are rising over time — possibly due to infrequent maintenance  
-- ❄**Inactive Systems** might relate to seasonal shutdowns  
-- **Permit Renewals** often coincide with drops in water quality
+### Cost Evaluation
+- Assessed cost implications of ingesting data into AWS S3, considering storage tiering and data transfer frequency
 
----
+### Cleaning Design
+- Defined a dataset cleaning plan in Excel
+- Outlined logic for handling missing values, standardizing column formats, and eliminating duplicate records
 
-## 📦 Deliverables
-
-- 🧹 Cleaned Dataset (AWS S3 + Glue Catalog)
-- 🗃️ Athena SQL Query Outputs
-- 📈 Visual Charts (Temp & Turbidity)
-- 📄 Project Report (Insights + Recommendations)
-- 🧠 Diagrams (Fishbone, Pipeline Design)
+### Cleaning Implementation
+- Implemented cleaning rules using AWS Glue
+- Verified transformations and prepared datasets for profiling and analysis
 
 ---
 
-## 👤 Author
+## Week 4 – Profiling, ETL, and Implementation
 
-**Hasan Ali Ahmed**  
-_MBA Candidate | Data Analyst | AWS Enthusiast_  
-📧 [hasanaliahmmed3912@gmail.com](mailto:hasanaliahmmed3912@gmail.com)
+### Profiling Cost Analysis
+- Evaluated cost of running profiling jobs on AWS Glue DataBrew
+
+### ETL Design
+- Outlined an ETL pipeline:
+  - Extract: raw financial data from S3
+  - Transform: clean and normalize data using Glue scripts
+  - Load: push curated data back into structured S3 folders
+
+### ETL Implementation
+- Deployed ETL pipeline using Glue jobs
+- Validated the consistency and quality of final outputs
 
 ---
 
-## 🔗 Related Projects
+## Tools and Technologies
 
-- [AWS Analysis Pipelines Project](#)
-- [Gigsup Career Platform Insights](#)
+| Tool              | Purpose                                  |
+|------------------|-------------------------------------------|
+| AWS S3           | Cloud data storage (raw + curated)        |
+| AWS EC2          | Virtual server for compute resources       |
+| AWS Glue         | ETL scripting and cleaning jobs           |
+| AWS DataBrew     | Profiling and data quality checks         |
+| draw.io          | Architecture and root cause diagrams      |
+| Microsoft Excel  | Cleaning logic design, cost tracking      |
+
+---
+
+## Key Deliverables
+
+- Infrastructure setup (VPC, EC2, S3)
+- System architecture and fishbone diagrams
+- Cleaned and organized datasets
+- Dataset profiling and cost evaluation
+- ETL pipeline documentation and execution
+- Weekly reports (PDF format)
+
+---
+
+## Author
+
+Hasan Ali Ahmed  
+MBA Candidate | AWS Cloud Projects | Business Technology  
+Email: hasanaliahmmed3912@gmail.com
+
+---
+
+## Appendix
+
+- [Week 2 Report (PDF)](./Week%202.pdf)  
+- [Week 3 Report (PDF)](./Week%203.pdf)  
+- [Week 4 Report (PDF)](./week%204.pdf)
