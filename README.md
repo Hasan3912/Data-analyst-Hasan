@@ -317,17 +317,38 @@ The dataset used remains: **Issued Operating Permits – Water Systems (Downtown
 | voluntary_participation  | object    | 0       | 2      | No              |
 | marker_color             | object    | 0       | 4      | Green           |
 
+
 ## Phase 6: Data Security
 
-Implemented a CIA triad model (Confidentiality, Integrity, Availability) using AWS-native services.
+Implemented a **CIA Triad** security framework (Confidentiality, Integrity, Availability) using AWS-native services to protect all data storage and movement across the platform.
 
-| Aspect           | Implementation Details                                                     |
-|------------------|-----------------------------------------------------------------------------|
-| Confidentiality  | Created a customer-managed symmetric KMS key (`van-water-key-has`) and applied it to all S3 buckets |
-| Integrity        | Enabled versioning on S3 buckets: `vancouver-raw-water`, `vancouver-cln-water`, and `vancouver-dst-water` |
-| Availability     | Configured replication to backup buckets for disaster recovery and fault tolerance |
+---
 
-> All data uploads/downloads are now encrypted using custom keys. Screenshots confirm encryption, versioning, and replication setup.
+### Confidentiality – Encryption with AWS KMS
+
+**Create Custom KMS Key**  
+Created a **customer-managed symmetric key** named `van-water-key-has` using AWS Key Management Service (KMS). This key is used to encrypt/decrypt all data in S3 buckets, ensuring sensitive data is protected at rest.
+
+![KMS Key Creation](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Key%20Management%20Service%20(KMS)%20%E2%80%93%20Creating%20a%20Custom%20Encryption%20Key.png)
+
+**Enable Bucket Encryption**  
+Applied the KMS key to all S3 buckets (e.g., `vancouver-raw-water`, `vancouver-cln-water`, `vancouver-dst-water`) to enforce encryption on both uploads and downloads.
+
+![Apply KMS to Bucket](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Enabling%20Bucket%20Encryption%20Using%20the%20Custom%20KMS%20Key.png)  
+![KMS Applied](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Applied%20the%20same%20KMS%20key%20.png)
+
+**Activate S3 Versioning**  
+Enabled **versioning** on each bucket to preserve past versions of objects. This allows data recovery in case of accidental changes or deletions.
+
+![Versioning Enabled](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Enabled%20versioning.png)  
+![Versioning on Raw Bucket](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Activating%20Versioning%20for%20Data%20Integrity%20and%20Recovery.png)
+
+**Setup Replication Rules**  
+Created replication policies for each primary S3 bucket to send data copies to respective backup buckets (`*-bac-water`). This ensures high availability and disaster recovery support.
+
+![Replication Setup](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Setting%20Up%20Replication%20for%20Availability%20and%20Redundancy.png)  
+![Replication Rules](https://github.com/Hasan3912/Data-analyst-Hasan/blob/56ce0ada48a2de4c8e66b300607649b52bb21036/Configured%20replication%20rules.png)
+
 
 ## Phase 7: Data Governance
 
