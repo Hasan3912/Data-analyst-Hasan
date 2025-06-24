@@ -171,54 +171,87 @@ To conduct column-wise profiling, apply cleaning operations, and generate dual o
 *Figure 6: ETL Pipeline Workflow Using AWS Glue Studio*
 
 ---
+# Project par 1 AWS Data Analytic Platform – Water Systems (Downtown Vancouver)
 
-This week completed the end-to-end transformation of raw data into optimized, analytics-ready formats using AWS cloud services.
+## Project Overview
+
+This project is part of the “AWS Data Analytic Platform for The City of Vancouver – Phase 1” initiative. My individual work focused on conducting a full descriptive analysis and AWS cloud-based pipeline for a dataset titled “Issued Operating Permits – Water Systems”, filtered for the Downtown Vancouver region. The objective was to analyze patterns related to permit issuance, system status, water quality, and support decision-making with insights from structured analytics.
+
+## Dataset Summary
+
+| Column Name              | Data Type | Missing Values | Unique Values | Example Value   |
+|--------------------------|-----------|----------------|----------------|-----------------|
+| permit_id                | object    | 0              | 100            | PID1000         |
+| system_type              | object    | 0              | 3              | Cooling Tower   |
+| status                   | object    | 0              | 2              | Inactive        |
+| voluntary_participation | object    | 0              | 2              | No              |
+| marker_color             | object    | 0              | 4              | Green           |
+
+## Implementation Phases
+
+### Phase 1: Data Ingestion and Planning
+- Defined the business problem and root causes using a Fishbone Diagram
+- Identified policy, technology, process, and human gaps
+- Designed the Data Lake structure using Excel and draw.io
+- Created an S3 bucket (vancouver-raw-men) with a subfolder (WaterSystemPermits)
+
+### Phase 2: Data Profiling
+- Created the dataset: Vancouver-WaterSystemPermits-Dst-Has
+- Executed profiling job: Vancouver-WaterSystemPermits-Profiling-Job-Has
+- Verified schema, checked for missing values and anomalies (no critical issues found)
+
+### Phase 3: Data Cleaning
+- Designed cleaning workflow using Excel and draw.io
+- Used AWS Glue DataBrew to implement the cleaning process
+- Created job: Vancouver-WaterSystemPermits-Cleaning-Job-Men
+- Addressed inconsistencies from both system-generated and user-input data
+
+### Phase 4: Data Cataloging
+- Designed ETL architecture and flowcharts
+- Created database: vancouver-waterpermits-catalog-men
+- Ran crawler on cleaned dataset to populate catalog with structured table
+
+### Phase 5: Data Enrichment and Summarization
+- Used Amazon Athena for querying enriched data
+- Analyzed trends in temperature and turbidity
+- Counted active vs. inactive systems
+- Created Excel-based line graphs to visualize findings
+
+## Key Findings
+
+- Water temperature followed a seasonal trend, with peaks in winter and dips in summer
+- Turbidity levels increased steadily, indicating potential degradation of water clarity
+- Emphasized need for timely inspections and permit renewals to maintain water safety standards
 
 ---
 
-##  Tool Stack
-| Technology      | Description                                |
-|----------------|--------------------------------------------|
-| Amazon S3      | Data lake for raw and curated datasets     |
-| Amazon EC2     | Compute instance for infrastructure testing|
-| AWS Glue       | ETL orchestration and transformation        |
-| AWS DataBrew   | Profiling and quality inspection            |
-| draw.io        | Visual diagrams (Architecture, Fishbone)    |
-| Excel          | Cleaning logic, cost models, data previews  |
+## Tools and Technologies
+
+| Category              | Tool or Platform           |
+|-----------------------|----------------------------|
+| Cloud Infrastructure  | AWS S3, EC2, EBS           |
+| Data Wrangling        | AWS Glue DataBrew          |
+| Querying              | Amazon Athena              |
+| Profiling             | AWS Glue Jobs              |
+| Visualization         | Excel (line graphs)        |
+| Diagramming           | draw.io, Excel             |
 
 ---
 
-##  Deliverables
-- AWS VPC, EC2 setup with documentation
-- Cleaned datasets in organized S3 folders
-- Data profiling and cost estimates
-- Working ETL pipeline in AWS Glue
-- Architecture & root cause diagrams
-- Weekly project reports (PDF)
+## Deliverables
+
+- PDF report summarizing analysis and implementation
+- Excel charts for temperature and turbidity
+- Screenshots from AWS components (S3, Athena, DataBrew)
+- Folder structure and pipeline diagrams
+- GitHub repository with project code and documentation
 
 ---
 
-## Repository Structure
-```bash
-/aws-project-portfolio
-├── week2
-│   ├── images
-│   │   ├── Finance Data Lake Design - Hasan-CC Solution #2.jpg
-│   │   └── Implementation w2.png
-│   ├── architecture_diagram.drawio
-│   ├── fishbone_diagram.drawio
-│   └── finance-raw-bim/
-├── week3
-│   ├── images/
-│   ├── cleaning_plan.xlsx
-│   ├── glue_job_screenshot.png
-│   └── cost_evaluation.pdf
-├── week4
-│   ├── images/
-│   ├── profiling_report.png
-│   ├── etl_pipeline_diagram.drawio
-│   └── transformed_dataset/
-└── reports
-    ├── Week2_Report.pdf
-    ├── Week3_Report.pdf
-    └── Week4_Report.pdf
+## Notes
+
+This project demonstrates a real-world approach to designing and executing a data analytics platform using AWS services. It contributes to urban water system safety through data-driven insights and scalable cloud architecture.
+
+---
+
+GitHub Link: [Insert your repository URL here]
