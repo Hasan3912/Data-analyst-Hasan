@@ -1,15 +1,36 @@
 # Cloud-Based Data Analytics & AWS Project Portfolio
 
 **Developed as part of BUSI 653 – Cloud Computing Technologies**  
-**Supervised by [Dr. Mahmood Mortazavi Dehkordi](https://www.ucanwest.ca/directory/mahmood-dehkordi)**
-Assistant Professor, Department of Marketing, Strategy & Entrepreneurship  
-**Hasan Ali Ahmed | MBA, Spring 2025 Cohort**
+**Supervised by [Dr. Mahmood Mortazavi Dehkordi](https://www.ucanwest.ca/directory/mahmood-dehkordi)** Assistant Professor, Department of Marketing, Strategy & Entrepreneurship  
+**Created By [Hasan Ali Ahmed](https://www.linkedin.com/in/hasanaliahmed3912/) | MBA UCW**
 ---
+# About This Portfolio
 
-## About This Portfolio
-This portfolio presents a complete collection of AWS cloud-based projects and weekly implementations focused on infrastructure setup, data cleaning, profiling, and ETL automation. Each segment showcases real-world cloud solutions that address problems in financial forecasting and urban water system management.
+This portfolio presents a complete collection of AWS cloud-based projects and weekly implementations completed as part of a 10-week course at University Canada West. It covers end-to-end data engineering concepts including:
 
-These projects are designed to demonstrate applied technical skills, data-driven problem solving, and modern infrastructure planning using Amazon Web Services (AWS).
+- Data Ingestion  
+- Data Cleaning  
+- Data Summarization  
+- Data Analysis  
+- Data Enrichment  
+- Data Security  
+- Data Governance  
+- Data Observability  
+
+All tasks were performed using core AWS modules such as **Amazon S3**, **AWS Glue**, **AWS DataBrew**, **Amazon Athena**, and **Amazon EC2**—demonstrating real-world cloud architecture, ETL pipelines, and analytics workflows.
+
+The final project was delivered in two parts and focused on analyzing **urban water system performance** using open data from the **City of Vancouver**. The dataset titled **"Issued Operating Permits – Water Systems"** included 594 records filtered for the Downtown area, detailing system types like cooling towers and water treatment units.
+
+We used AWS tools to process and visualize trends in:
+
+- **Average Temperature**  
+- **Average Turbidity**  
+
+plotted over **Permit Renewal Dates** to evaluate changes in water quality and maintenance practices.
+
+This portfolio reflects practical experience in designing cloud infrastructure and executing data workflows using AWS technologies
+
+
 
 
 ## Portfolio Contents
@@ -32,34 +53,30 @@ These projects are designed to demonstrate applied technical skills, data-driven
 
 ---
 
-## 🧽 Project Overview
-This repository documents the development of a cloud-based financial data system built during Weeks 2–4 of BUSI 653: Cloud Computing Technologies.  
-It demonstrates applied cloud skills in data storage, profiling, transformation, cost optimization, and process visualization.
-
----
-
 ## 🗕️ Weekly Breakdown
-
 
 ### Week 2: Infrastructure Design & Problem Definition
 
 ### Project Description:
-This week focused on establishing the foundational architecture for conducting descriptive analytics on customer purchase data from XYZ Retail (simulated as UCW’s Finance Department). The emphasis was on understanding business questions, analyzing operational datasets, and preparing a secure and scalable environment for data ingestion and analytics.
+This week focused on establishing the foundational architecture for conducting descriptive analytics on customer purchase data from UCW’s Finance Department. The emphasis was on understanding business questions, analyzing operational datasets, and preparing a secure and scalable environment for data ingestion and analytics.
 
 ### Objective:
 To analyze the business question provided by the finance department, identify relevant datasets and metadata, and create a cloud-based data lake (AWS S3) with a structured folder and tagging system to support future data ingestion and transformation processes.
 
 
-## Dataset
-Transactional data spanning one year from XYZ Retail, including:
-- **Transaction ID** – Unique identifier for each purchase  
-- **Customer ID** – Unique customer number  
-- **Purchase Date** – Date and time of each transaction  
-- **Product Category** – Category such as electronics, clothing, groceries  
-- **Quantity** – Number of items purchased  
-- **Price** – Total value of the transaction  
-- **Payment Method** – Credit card, cash, or digital  
-- **Location** – Store location of the transaction  
+### Data set Used:
+This project utilized simulated transaction-like datasets from the UCW Finance Department. Each file represents a key academic or administrative process.
+
+| File Name           | Format | Description                                  |
+|---------------------|--------|----------------------------------------------|
+| Course Registration | CSV    | Records of student course enrollments       |
+| Course Scheduling   | CSV    | Course and timetable scheduling data        |
+| Server Log          | CSV    | System/server access records                 |
+| Staff Tasks         | CSV    | Task assignments and completions for staff  |
+| Student Feedback    | CSV    | Collected feedback entries from students     |
+| Student Holds       | CSV    | Administrative holds placed on students      |
+| Support Tickets     | CSV    | Help desk and student service ticket records |
+
 
 **Design**
 - System architecture diagram linking UCW to AWS
@@ -106,21 +123,44 @@ To implement a structured data ingestion process for customer transaction data, 
 
 ### Week 4: Profiling & ETL Implementation
 
-**Design**
-- ETL Workflow: Extract (S3) → Transform (Glue) → Load (Curated S3)
-- Data partition strategy by categorical field (e.g., platform, failure reason)
+### Project Description:
+This week focused on profiling and transforming datasets from the UCW Finance Department using AWS Glue DataBrew. The goal was to prepare clean, analytics-ready outputs in both user-friendly and system-optimized formats using proper compression and partitioning.
 
-**Implementation**
-- Conducted profiling with AWS DataBrew
-- Created user-friendly (CSV) and system-friendly (Parquet + Snappy) outputs
-- Validated folder output and structure in user/system directories
+###  Objective:
+To conduct column-wise profiling, apply cleaning operations, and generate dual outputs:
+- **CSV** for user-readable reports
+- **Parquet + Snappy** for efficient system storage and querying
 
-**Visual Preview**
-*Screenshots to be added in `/week4/images/` folder*
+### 🛠Design
+- Created new S3 folder structure under `/cleaning/user/` and `/cleaning/system/`
+- Selected key columns (e.g., platform, failure_reason) for **partitioning strategy**
+- Planned two output pipelines:
+  - CSV → for business users
+  - Parquet (Snappy + partitioned) → for system use
+
+### Implementation
+- Built Glue DataBrew projects for each dataset
+- Performed profiling to check for:
+  - Missing values
+  - Data type mismatches
+  - Formatting issues
+- Applied column-wise transformations and rules
+- Generated:
+  - `User Outputs` → CSV files
+  - `System Outputs` → Partitioned Parquet files with compression
+- Verified outputs and partition structure in S3
 
 ---
 
-## 🔧 Tool Stack
+### 🖼Visual Preview
+*Screenshots to be added in `/week4/images/` folder*
+
+> Examples:  
+> - DataBrew project profiling view  
+> - Output CSV folder (`/cleaning/user/`)  
+---
+
+##  Tool Stack
 | Technology      | Description                                |
 |----------------|--------------------------------------------|
 | Amazon S3      | Data lake for raw and curated datasets     |
@@ -132,7 +172,7 @@ To implement a structured data ingestion process for customer transaction data, 
 
 ---
 
-## 📦 Deliverables
+##  Deliverables
 - AWS VPC, EC2 setup with documentation
 - Cleaned datasets in organized S3 folders
 - Data profiling and cost estimates
@@ -142,7 +182,7 @@ To implement a structured data ingestion process for customer transaction data, 
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 ```bash
 /aws-project-portfolio
 ├── week2
