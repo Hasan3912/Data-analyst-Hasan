@@ -1,12 +1,12 @@
-# 💧 Descriptive Analysis of Issued Operating Permits – Water Systems (Downtown Vancouver)
+# Descriptive Analysis of Issued Operating Permits – Water Systems (Downtown Vancouver)
 
-## 📌 Project Overview  
+## Project Overview  
 This project analyzes the **"Issued Operating Permits – Water Systems"** dataset from the City of Vancouver's Open Data Portal, focusing specifically on Downtown Vancouver.  
 The goal is to uncover temporal trends in water system permits and water quality indicators—such as **temperature** and **turbidity**—to enhance **permit compliance**, **maintenance strategies**, and overall **urban water safety**.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Identify patterns in **permit issuance**, **system activity**, and **system types**.
 - Detect trends in water quality indicators like **turbidity** and **temperature**.
@@ -14,7 +14,7 @@ The goal is to uncover temporal trends in water system permits and water quality
 
 ---
 
-## 🧰 Tools & Technologies
+## Tools & Technologies
 
 | Tool                | Purpose                                              |
 |---------------------|------------------------------------------------------|
@@ -27,7 +27,7 @@ The goal is to uncover temporal trends in water system permits and water quality
 
 ---
 
-## 🗂️ Dataset Description
+## Dataset Description
 
 **Source**: City of Vancouver Open Data Portal  
 **Records**: 594 (Filtered to Downtown Vancouver)
@@ -45,7 +45,7 @@ The goal is to uncover temporal trends in water system permits and water quality
 
 ---
 
-## 🔍 Methodology
+## Methodology
 
 ### 1. Data Ingestion & Profiling
 - Uploaded raw data to **Amazon S3**
@@ -66,22 +66,12 @@ The goal is to uncover temporal trends in water system permits and water quality
 
 ---
 
-## 📊 Key Insights
+##  Key Insights
 
-- 🌡️ **Water Temperature** peaks in winter — likely due to indoor or heated systems  
-- 🌫️ **Turbidity levels** are rising over time — possibly due to infrequent maintenance  
-- ❄️ **Inactive Systems** might relate to seasonal shutdowns  
-- 🕒 **Permit Renewals** often coincide with drops in water quality
-
----
-
-## ✅ Recommendations
-
-- Implement **scheduled maintenance** based on seasonal trends  
-- Deploy **real-time water monitoring sensors**  
-- Streamline **permit renewal** with digital reminders  
-- Review and audit **inactive systems**  
-- Update city **policies and inspector training**
+- **Water Temperature** peaks in winter — likely due to indoor or heated systems  
+- **Turbidity levels** are rising over time — possibly due to infrequent maintenance  
+- ❄**Inactive Systems** might relate to seasonal shutdowns  
+- **Permit Renewals** often coincide with drops in water quality
 
 ---
 
