@@ -119,24 +119,30 @@ To implement a structured data ingestion process for customer transaction data, 
 -  *Figure 4: AWS S3 Cost Estimation Using Pricing Calculator*
 
 
----
 
 ### Week 4: Profiling & ETL Implementation
 
 ### Project Description:
 This week focused on profiling and transforming datasets from the UCW Finance Department using AWS Glue DataBrew. The goal was to prepare clean, analytics-ready outputs in both user-friendly and system-optimized formats using proper compression and partitioning.
 
-###  Objective:
+### Objective:
 To conduct column-wise profiling, apply cleaning operations, and generate dual outputs:
-- **CSV** for user-readable reports
-- **Parquet + Snappy** for efficient system storage and querying
+- CSV for user-readable reports
+- Parquet + Snappy for efficient system storage and querying
 
-### 🛠Design
+---
+
+### Design
 - Created new S3 folder structure under `/cleaning/user/` and `/cleaning/system/`
-- Selected key columns (e.g., platform, failure_reason) for **partitioning strategy**
+- Selected key columns (e.g., platform, failure_reason) for partitioning strategy
 - Planned two output pipelines:
-  - CSV → for business users
+  - CSV → for business users  
   - Parquet (Snappy + partitioned) → for system use
+
+![ETL System Architecture](https://github.com/Hasan3912/Data-analyst-Hasan/blob/aea3ce73d90f335b97512398926e23c30762f3dc/Finance%20-%20DAP%20-%20Week%204%20-%20ETL%20%20Design%20-%20Hasan-CC%20Solution%20%234.jpg)  
+*Figure 5: Week 4 ETL Design Architecture for Finance Data Lake*
+
+---
 
 ### Implementation
 - Built Glue DataBrew projects for each dataset
@@ -146,18 +152,17 @@ To conduct column-wise profiling, apply cleaning operations, and generate dual o
   - Formatting issues
 - Applied column-wise transformations and rules
 - Generated:
-  - `User Outputs` → CSV files
+  - `User Outputs` → CSV files  
   - `System Outputs` → Partitioned Parquet files with compression
 - Verified outputs and partition structure in S3
 
+![ETL Workflow in AWS Glue](https://github.com/Hasan3912/Data-analyst-Hasan/blob/aea3ce73d90f335b97512398926e23c30762f3dc/week4.png)  
+*Figure 6: ETL Pipeline Workflow Using AWS Glue Studio*
+
 ---
 
-### 🖼Visual Preview
-*Screenshots to be added in `/week4/images/` folder*
+This week completed the end-to-end transformation of raw data into optimized, analytics-ready formats using AWS cloud services.
 
-> Examples:  
-> - DataBrew project profiling view  
-> - Output CSV folder (`/cleaning/user/`)  
 ---
 
 ##  Tool Stack
