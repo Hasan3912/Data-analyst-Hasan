@@ -54,7 +54,7 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 - Uploaded raw datasets and structured folders by type/frequency
 
 **Visual Preview**
-![Image Alt](image_url)
+[Image Alt](https://github.com/Hasan3912/Data-analyst-Hasan/blob/054d5c9d5c56162a85763d84f79b92978266d8a1/Finance%20Data%20Lake%20Design%20-%20Hasan-CC%20Solution%20%232.jpg)
 *Figure 1: Finance Data Lake Design*
 
 ![Week 2 Implementation Screenshot](week2/images/Implementation%20w2.png)  
