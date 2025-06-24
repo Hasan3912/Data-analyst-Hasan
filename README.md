@@ -45,7 +45,7 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 
 **Design**
 - System architecture diagram linking UCW to AWS
-- VPC configuration with `Finance-VPC-Men` and security group `Finance-SG-Men`
+- VPC configuration with `Finance-VPC-has` and security group `Finance-SG-has`
 - Fishbone diagram analyzing cash flow bottlenecks
 
 **Implementation**
