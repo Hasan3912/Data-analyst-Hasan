@@ -208,7 +208,7 @@ To conduct column-wise profiling, apply cleaning operations, and generate dual o
 ![ETL Workflow in AWS Glue](https://github.com/Hasan3912/Data-analyst-Hasan/blob/aea3ce73d90f335b97512398926e23c30762f3dc/week4.png)  
 *Figure 6: ETL Pipeline Workflow Using AWS Glue Studio*
 
-# Project par 1 AWS Data Analytic Platform – Water Systems (Downtown Vancouver)
+# Project part 1 AWS Data Analytic Platform – Water Systems (Downtown Vancouver)
 
 ## Project Overview
 
