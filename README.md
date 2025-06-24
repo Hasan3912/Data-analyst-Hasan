@@ -193,29 +193,56 @@ This project is part of the “AWS Data Analytic Platform for The City of Vancou
 - Defined the business problem and root causes using a Fishbone Diagram
 - Identified policy, technology, process, and human gaps
 - Designed the Data Lake structure using Excel and draw.io
-- Created an S3 bucket (vancouver-raw-men) with a subfolder (WaterSystemPermits)
+- Created an S3 bucket (`vancouver-raw-men`) with a subfolder (`WaterSystemPermits`)
+
+**Supporting Visual:**  
+![Data Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20ingestion%20.png)
+
+**Cost Evaluation Diagram:**  
+![Cost Evaluation of Dataset Ingestion](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Cost%20Evaluation%20of%20Dataset%20Ingestion%20.png)
+
+---
 
 ### Phase 2: Data Profiling
-- Created the dataset: Vancouver-WaterSystemPermits-Dst-Has
-- Executed profiling job: Vancouver-WaterSystemPermits-Profiling-Job-Has
+- Created the dataset: `Vancouver-WaterSystemPermits-Dst-Has`
+- Executed profiling job: `Vancouver-WaterSystemPermits-Profiling-Job-Has`
 - Verified schema, checked for missing values and anomalies (no critical issues found)
+
+**Supporting Visual:**  
+![Data Profiling](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Profiling.png)
+
+---
 
 ### Phase 3: Data Cleaning
 - Designed cleaning workflow using Excel and draw.io
 - Used AWS Glue DataBrew to implement the cleaning process
-- Created job: Vancouver-WaterSystemPermits-Cleaning-Job-Men
+- Created job: `Vancouver-WaterSystemPermits-Cleaning-Job-Men`
 - Addressed inconsistencies from both system-generated and user-input data
+
+**Supporting Visual:**  
+![Data Cleaning Implementation System](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cleaning%20Implementation%20System.png)
+
+---
 
 ### Phase 4: Data Cataloging
 - Designed ETL architecture and flowcharts
-- Created database: vancouver-waterpermits-catalog-men
+- Created database: `vancouver-waterpermits-catalog-men`
 - Ran crawler on cleaned dataset to populate catalog with structured table
+
+**Supporting Visual:**  
+![Data Cataloging](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Cataloging.png)
+
+---
 
 ### Phase 5: Data Enrichment and Summarization
 - Used Amazon Athena for querying enriched data
 - Analyzed trends in temperature and turbidity
 - Counted active vs. inactive systems
 - Created Excel-based line graphs to visualize findings
+
+**Supporting Visual:**  
+![Data Enriching Implementation](https://github.com/Hasan3912/Data-analyst-Hasan/blob/ef84a085f2aa3da8608138934f96dfadbfe35f32/Data%20Enriching%20Implementation.png)
+
 
 ## Key Findings
 
