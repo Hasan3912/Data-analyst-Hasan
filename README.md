@@ -1,106 +1,106 @@
-# AWS Cloud-Based Finance System (Weeks 2–4 Progress Portfolio)
-
-## Course: BUSI 653 – Cloud Computing Technologies  
-University Canada West | Spring 2025  
-Instructor: Dr. Mahmood Mortazavi Dehkordi  
-Submitted by: Hasan Ali Ahmed (ID: 2239226)
+<h1 align="center">AWS Cloud-Based Finance System</h1>
+<p align="center">
+  <i>A technical portfolio showcasing data infrastructure, analytics, and ETL automation using AWS.</i>
+</p>
 
 ---
 
-## Project Summary
+## 🧭 Project Overview
 
-This portfolio outlines the step-by-step development of a cloud-based finance data management system using AWS. The work spans Weeks 2 to 4 and demonstrates infrastructure setup, data profiling, ingestion, transformation, cost evaluation, and ETL implementation.
-
----
-
-## Week 2 – Architecture & Foundation Setup
-
-### Technical Setup
-- Created a Virtual Private Cloud (VPC) named `Finance-VPC-Men`
-- Configured a Security Group `Finance-SG-Men`
-- Launched a t3.micro EC2 instance with public access
-- Documented CLI commands for repeatable infrastructure setup
-
-### Diagrams & Root Cause Analysis
-- Designed a system architecture diagram using draw.io to visualize UCW's integration with AWS (EC2, S3, IAM)
-- Created a Fishbone (Cause-and-Effect) diagram to explore factors contributing to delayed payments
-
-### Data Management
-- Organized and stored three datasets: Historical Budgets, Department Expenses, Revenue Streams
-- Used Amazon S3 bucket `finance-raw-bim` for efficient, scalable storage
-- Structured folders by update frequency, storage class, and data ownership
-
-### Problem Statement
-Focused on improving department budget forecasting using historical data. Identified key issues including outdated software, lack of training, absence of standardized review processes, and poor departmental communication.
+This repository documents the development of a cloud-based financial data system built during Weeks 2–4 of BUSI 653: Cloud Computing Technologies.  
+It demonstrates applied cloud skills in data storage, profiling, transformation, cost optimization, and process visualization.
 
 ---
 
-## Week 3 – Dataset Ingestion & Cleaning
+## 📅 Weekly Breakdown
 
-### Cost Evaluation
-- Assessed cost implications of ingesting data into AWS S3, considering storage tiering and data transfer frequency
+### Week 2: Infrastructure Design & Problem Definition
 
-### Cleaning Design
-- Defined a dataset cleaning plan in Excel
-- Outlined logic for handling missing values, standardizing column formats, and eliminating duplicate records
+**Key Achievements**
+- Created `Finance-VPC-Men` and secured it with `Finance-SG-Men`
+- Launched a public EC2 instance using `t3.micro`
+- Designed system architecture linking UCW to AWS
+- Built a Fishbone diagram to diagnose cash flow issues
+- Organized datasets in `finance-raw-bim` S3 bucket
 
-### Cleaning Implementation
-- Implemented cleaning rules using AWS Glue
-- Verified transformations and prepared datasets for profiling and analysis
+> **Problem Focus**  
+> Improve the accuracy of departmental budget forecasts by leveraging historical financial data and addressing barriers like outdated tools and miscommunication.
 
----
-
-## Week 4 – Profiling, ETL, and Implementation
-
-### Profiling Cost Analysis
-- Evaluated cost of running profiling jobs on AWS Glue DataBrew
-
-### ETL Design
-- Outlined an ETL pipeline:
-  - Extract: raw financial data from S3
-  - Transform: clean and normalize data using Glue scripts
-  - Load: push curated data back into structured S3 folders
-
-### ETL Implementation
-- Deployed ETL pipeline using Glue jobs
-- Validated the consistency and quality of final outputs
+**Visual Preview**  
+<p align="center">
+  <img src="images/week2_architecture.png" width="600" alt="Week 2 Architecture">
+</p>
 
 ---
 
-## Tools and Technologies
+### Week 3: Data Ingestion & Cleaning Pipeline
 
-| Tool              | Purpose                                  |
-|------------------|-------------------------------------------|
-| AWS S3           | Cloud data storage (raw + curated)        |
-| AWS EC2          | Virtual server for compute resources       |
-| AWS Glue         | ETL scripting and cleaning jobs           |
-| AWS DataBrew     | Profiling and data quality checks         |
-| draw.io          | Architecture and root cause diagrams      |
-| Microsoft Excel  | Cleaning logic design, cost tracking      |
+**Key Achievements**
+- Evaluated ingestion and storage costs on AWS S3
+- Created a detailed cleaning plan (null handling, standardization, deduplication)
+- Implemented data transformation using AWS Glue
 
----
-
-## Key Deliverables
-
-- Infrastructure setup (VPC, EC2, S3)
-- System architecture and fishbone diagrams
-- Cleaned and organized datasets
-- Dataset profiling and cost evaluation
-- ETL pipeline documentation and execution
-- Weekly reports (PDF format)
+**Visual Preview**  
+<p align="center">
+  <img src="images/week3_cleaning_job.png" width="600" alt="Week 3 Cleaning Job">
+</p>
 
 ---
 
-## Author
+### Week 4: Profiling & ETL Implementation
 
-Hasan Ali Ahmed  
-MBA Candidate | AWS Cloud Projects | Business Technology  
-Email: hasanaliahmmed3912@gmail.com
+**Key Achievements**
+- Conducted profiling jobs with AWS Glue DataBrew
+- Designed ETL pipeline: Extract (S3) → Transform (Glue) → Load (Curated S3)
+- Deployed and validated the ETL flow
+
+**Visual Preview**  
+<p align="center">
+  <img src="images/week4_etl_pipeline.png" width="600" alt="Week 4 ETL Pipeline">
+</p>
 
 ---
 
-## Appendix
+## 🔧 Tool Stack
 
-- [Week 2 Report (PDF)](./Week%202.pdf)  
-- [Week 3 Report (PDF)](./Week%203.pdf)  
-- [Week 4 Report (PDF)](./week%204.pdf)
+| Technology        | Description                                  |
+|-------------------|----------------------------------------------|
+| **Amazon S3**      | Data lake for raw and curated datasets       |
+| **Amazon EC2**     | Compute instance for infrastructure testing  |
+| **AWS Glue**       | ETL orchestration and transformation         |
+| **AWS DataBrew**   | Profiling and quality inspection             |
+| **draw.io**        | Visual diagrams (Architecture, Fishbone)     |
+| **Excel**          | Cleaning logic, cost models, data previews   |
+
+---
+
+## 📦 Deliverables
+
+- [x] AWS VPC, EC2 setup with documentation  
+- [x] Cleaned datasets in organized S3 folders  
+- [x] Data profiling and cost estimates  
+- [x] Working ETL pipeline in AWS Glue  
+- [x] Architecture & root cause diagrams  
+- [x] Weekly project reports (PDF)
+
+---
+
+## 📁 Repository Structure
+
+
+---
+
+## 👤 Author
+
+**Hasan Ali Ahmed**  
+MBA Candidate | Cloud & Data Analytics Enthusiast  
+📍 British Columbia, Canada  
+📧 hasanaliahmmed3912@gmail.com  
+
+---
+
+## 📑 Appendix
+
+- [📄 Week 2 Report (PDF)](./Week%202.pdf)  
+- [📄 Week 3 Report (PDF)](./Week%203.pdf)  
+- [📄 Week 4 Report (PDF)](./week%204.pdf)
