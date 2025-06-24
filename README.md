@@ -15,9 +15,9 @@ These projects are designed to demonstrate applied technical skills, data-driven
 ## Portfolio Contents
 | Module     | Focus Area                   | Key Deliverables                                     |
 |------------|------------------------------|------------------------------------------------------|
-| Week 2     | AWS Infrastructure & Architecture | VPC, EC2, Architecture Diagram, Fishbone Diagram, Raw Dataset |
-| Week 3     | Data Ingestion & Cleaning    | Cleaning Plan (Excel), AWS Glue Job, Cost Evaluation |
-| Week 4     | Profiling & ETL Pipeline     | DataBrew Profiling, ETL Workflow, Transformed Dataset |
+| Week 2     | AWS Infrastructure & Architecture | Design: VPC, EC2, Architecture Diagram, Fishbone Diagram <br> Implementation: Raw Dataset Folder Structure |
+| Week 3     | Data Ingestion & Cleaning    | Design: Cleaning Plan (Excel), Cost Estimation Model <br> Implementation: AWS Glue Job Execution, Screenshots |
+| Week 4     | Profiling & ETL Pipeline     | Design: ETL Workflow, Partition Strategy <br> Implementation: DataBrew Profiling, Transformed Dataset in S3 |
 | Project 1  | Water System Compliance Analysis | Athena Analysis, Trend Graphs, Visualized Dashboard  |
 | Project 2  | Budget Forecasting System    | Financial ETL Pipeline, Excel Forecasting Model, Final Report |
 
@@ -42,36 +42,47 @@ It demonstrates applied cloud skills in data storage, profiling, transformation,
 ## 🗕️ Weekly Breakdown
 
 ### Week 2: Infrastructure Design & Problem Definition
-**Key Achievements**
-- Created `Finance-VPC-Men` and secured it with `Finance-SG-Men`
-- Launched a public EC2 instance using `t3.micro`
-- Designed system architecture linking UCW to AWS
-- Built a Fishbone diagram to diagnose cash flow issues
-- Organized datasets in `finance-raw-bim` S3 bucket
+**Design**
+- System architecture diagram linking UCW to AWS
+- VPC configuration with `Finance-VPC-Men` and security group `Finance-SG-Men`
+- Fishbone diagram analyzing cash flow bottlenecks
 
-**Problem Focus**
-> Improve the accuracy of departmental budget forecasts by leveraging historical financial data and addressing barriers like outdated tools and miscommunication.
+**Implementation**
+- Launched EC2 instance using `t3.micro`
+- Created `finance-raw-bim` S3 bucket
+- Uploaded raw datasets and structured folders by type/frequency
 
 **Visual Preview**
-- Week 2 Architecture Diagram (draw.io)
+- Architecture Diagram (draw.io)
+- Fishbone Root Cause Diagram
 
 ### Week 3: Data Ingestion & Cleaning Pipeline
-**Key Achievements**
-- Evaluated ingestion and storage costs on AWS S3
-- Created a detailed cleaning plan (null handling, standardization, deduplication)
-- Implemented data transformation using AWS Glue
+**Design**
+- Cleaning strategy in Excel: null handling, format standardization, deduplication plan
+- Cost estimation using AWS Pricing Calculator and S3 Storage Lens
+
+**Implementation**
+- Uploaded datasets to S3
+- Created AWS Glue jobs for transformation
+- Captured screenshots of AWS Glue execution and pricing breakdowns
 
 **Visual Preview**
-- Week 3 Cleaning Job Screenshot
+- Glue Job Screenshot
+- AWS Pricing Summary PDF
 
 ### Week 4: Profiling & ETL Implementation
-**Key Achievements**
-- Conducted profiling jobs with AWS Glue DataBrew
-- Designed ETL pipeline: Extract (S3) → Transform (Glue) → Load (Curated S3)
-- Deployed and validated the ETL flow
+**Design**
+- ETL Workflow: Extract (S3) → Transform (Glue) → Load (Curated S3)
+- Data partition strategy by categorical field (e.g., platform, failure reason)
+
+**Implementation**
+- Conducted profiling with AWS DataBrew
+- Created user-friendly (CSV) and system-friendly (Parquet + Snappy) outputs
+- Validated folder output and structure in user/system directories
 
 **Visual Preview**
-- Week 4 ETL Pipeline Diagram
+- ETL Pipeline Diagram (draw.io)
+- Partitioned S3 Output Screenshot
 
 ---
 
