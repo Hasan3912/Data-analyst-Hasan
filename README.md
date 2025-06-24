@@ -1,14 +1,20 @@
-<p align="left">
-  <img src="https://github.com/Hasan3912/Data-analyst-Hasan/blob/a332c2289f926c20c6e85b62b72d0b6c0c9f8726/photo-012.jpg?raw=true" alt="Hasan Ali Ahmed" width="120" style="border-radius: 50%; vertical-align: middle; margin-right: 10px;">
-</p>
-
-# Cloud-Based Data Analytics & AWS Project Portfolio
-
-**Developed as part of BUSI 653 – Cloud Computing Technologies**  
-**Supervised by [Dr. Mahmood Mortazavi Dehkordi](https://www.ucanwest.ca/directory/mahmood-dehkordi)**  
-Assistant Professor, Department of Marketing, Strategy & Entrepreneurship  
-**Created By [Hasan Ali Ahmed](https://www.linkedin.com/in/hasanaliahmed3912/) | MBA UCW**
----
+<table style="border: none; border-spacing: 0;">
+  <tr>
+    <td style="vertical-align: top;">
+      <img src="https://github.com/Hasan3912/Data-analyst-Hasan/blob/a332c2289f926c20c6e85b62b72d0b6c0c9f8726/photo-012.jpg?raw=true"
+           alt="Hasan Ali Ahmed"
+           width="200"
+           style="display: block; object-fit: cover;">
+    </td>
+    <td style="vertical-align: top; padding-left: 10px; font-size: 14px; line-height: 1.4;">
+      <h2 style="margin: 0 0 6px;">Cloud-Based Data Analytics & AWS Project Portfolio</h2>
+      <p style="margin: 0;"><strong>Developed for BUSI 653 – Cloud Computing Technologies</strong></p>
+      <p style="margin: 0;">Supervised by <a href="https://www.ucanwest.ca/directory/mahmood-dehkordi">Dr. Mahmood Mortazavi Dehkordi</a></p>
+      <p style="margin: 0;">Assistant Professor, Dept. of Marketing, Strategy & Entrepreneurship</p>
+      <p style="margin: 0;">Created by <a href="https://www.linkedin.com/in/hasanaliahmed3912/">Hasan Ali Ahmed</a> | MBA UCW</p>
+    </td>
+  </tr>
+</table>
 # About This Portfolio
 
 This portfolio presents a complete collection of AWS cloud-based projects and weekly implementations completed as part of a 10-week course at University Canada West. It covers end-to-end data engineering concepts including:
